@@ -4,9 +4,10 @@ const AuthContext = createContext();
 
 export function AuthProvider({children}) {
     const [isAuthenticated, setIsAuthenticated] = useState(false);
+    const setting_password = process.env.REACT_APP_PASSWORD;
 
     const login = (password) =>{
-        if(password === 'password'){
+        if(password === setting_password){
             setIsAuthenticated(true);
         }
     };
