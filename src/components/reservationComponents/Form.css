@@ -1,0 +1,77 @@
+.form{
+    flex: 0.35;
+    padding-top: 200px;
+    padding-left: 20px;
+}
+
+
+.form-group{
+    display: flex;
+    align-items: center;
+    padding-top: 40px;
+    height: 80px;
+    width: auto;
+}
+
+.form-group-name{
+    align-items: right;
+    padding-top: 20px;
+    font-size: 16px;
+    width: auto; 
+}
+
+.form-group-time{
+    display: flex;
+    padding-top: 20px;
+}
+
+.buttonForm{
+    padding-top: 50px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.button{
+    font-size: 40px;
+    background-color: var(--app-color);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.button:hover {
+    background-color: #3a8ac5;
+}
+
+.customDatePicker input {
+    font-size: 32px; 
+    width: auto;
+}
+
+.customDatePicker label {
+    font-size: 20px; /* ここで任意のサイズに変更します */
+}
+
+.customTimePicker label{
+    font-size: 20px;
+}
+
+.customTimePicker input{
+    font-size: 32px;
+    width: 80px;
+}
+
+.customTimePicker {
+    padding-top: 20px;
+    padding-right: 20px;
+}
+
+.nameForm{
+    font-size: 32px;
+    padding: 12px;
+    height: 50px;
+}

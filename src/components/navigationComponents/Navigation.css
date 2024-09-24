@@ -1,0 +1,12 @@
+.sidenav---navtext---1AE_f {
+    font-size: 16px !important; /* 希望のサイズに調整してください */
+  }
+  
+  /* サブメニューの文字サイズを変更する場合 */
+  .sidenav---navtext---1AE_f + .sidenav---navtext---1AE_f {
+    font-size: 20px !important; /* 希望のサイズに調整してください */
+  }
+
+  .mysidenav{
+    background-color: #00b3ea;
+  }
