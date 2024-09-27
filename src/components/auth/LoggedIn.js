@@ -1,12 +1,15 @@
 import React from "react";
 import styles from "./LoggedIn.module.css";
 import { useAuth } from "./AuthContext";
+import { useNavigate } from "react-router-dom";
 
 function LoggedIn() {
   const { logout } = useAuth();
+  const navigate =useNavigate(); 
 
   const handleLogout = () => {
     logout();
+    navigate('/settings/login')
   };
 
   return (

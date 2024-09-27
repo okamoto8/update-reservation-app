@@ -7,10 +7,17 @@ function Login() {
   const { login ,isAuthenticated} = useAuth();
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
+  const [error,setError]= useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    login(password);
+    const success = login(password);
+    if (!success){
+      setError("パスワードが間違っています。")
+      alert("パスワードが間違っています")
+    }else{
+      setError("")
+    }
   };
 
 
@@ -34,7 +41,7 @@ function Login() {
           required
         />
         <br />
-        <button type="submit" className={styles.button}>
+        <button type="button" className={styles.button} onClick={handleSubmit}>
             Login
         </button>
       </form>

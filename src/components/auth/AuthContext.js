@@ -9,7 +9,9 @@ export function AuthProvider({children}) {
     const login = (password) =>{
         if(password === setting_password){
             setIsAuthenticated(true);
+            return true;
         }
+        return false;
     };
 
     const logout = () => {
