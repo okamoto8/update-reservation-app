@@ -30,7 +30,7 @@ function App() {
         <Route path='/settings/add-reservation-table' element={<ProtectedRoute element={<AddReservationTable />} />} />
         <Route path='/settings/delete-resource'  element={<ProtectedRoute element={<DeleteResourcePage />} />} />
         <Route path='/settings/update-resource'  element={<ProtectedRoute element={<UpdateResourcePage />} />} />
-        <Route path='/settings/logged-in' element={<ProtectedRoute element={<LoggedIn />} />} />
+        <Route path='/settings/logged-in' element={<LoggedIn/>}/>
       </Routes>
       </AuthProvider>
     </BrowserRouter>

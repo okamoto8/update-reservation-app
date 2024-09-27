@@ -7,7 +7,7 @@ import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import axios from "axios";
 import CustomTimePicker from "./CustomTimePicker";
 
-function Form({ resourceId,addEvent }) {
+function Form({ resourceId, addEvent }) {
   const [name, setName] = useState("");
   const [startTime, setStartTime] = useState(
     dayjs().startOf("day").hour(12).minute(0)
@@ -32,7 +32,7 @@ function Form({ resourceId,addEvent }) {
       const newStartTime = combineDateTime(startTime, newTime);
       setStartTime(newStartTime);
       // 終了時刻を開始時刻の1時間後に設定
-      setEndTime(newStartTime.add(1, 'hour'));
+      setEndTime(newStartTime.add(1, "hour"));
     } else {
       setEndTime(combineDateTime(endTime, newTime));
     }
@@ -71,11 +71,9 @@ function Form({ resourceId,addEvent }) {
       );
       console.log("API Response:", response.data);
 
-      
-
-      if(response.data.error){
+      if (response.data.error) {
         alert(response.data.error);
-      }else{
+      } else {
         addEvent({
           id: response.data.userId,
           title: response.data.userName,
@@ -92,7 +90,7 @@ function Form({ resourceId,addEvent }) {
       setEndTime(dayjs().startOf("day").hour(13).minute(0));
     } catch (error) {
       console.error("Error submitting reservation:", error);
-      if(error.response && error.response.data && error.response.data.error){
+      if (error.response && error.response.data && error.response.data.error) {
         alert(error.response.data.error);
       }
       alert("予約の送信中にエラーが発生しました。");
@@ -133,19 +131,17 @@ function Form({ resourceId,addEvent }) {
             />
           </div>
         </LocalizationProvider>
-      </div>
-      <div className="form-group-name">
-        <label></label>
-        <input
-          type="text"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          onKeyDown={handleKeyDown}
-          placeholder="Gr 氏名を入力してください"
-          className="nameForm"
-        />
-      </div>
-      <div className="buttonForm">
+        <div className="form-group-name">
+          <input
+            type="text"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            onKeyDown={handleKeyDown}
+            placeholder="Gr 氏名を入力してください"
+            className="nameForm"
+          />
+        </div>
+        <br />
         <input type="submit" value="登録" className="button" />
       </div>
     </form>

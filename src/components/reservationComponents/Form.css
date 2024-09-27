@@ -2,34 +2,23 @@
     flex: 0.35;
     padding-top: 200px;
     padding-left: 20px;
+    width: 100%;
 }
 
-
-.form-group{
-    display: flex;
-    align-items: center;
-    padding-top: 40px;
-    height: 80px;
-    width: auto;
-}
 
 .form-group-name{
-    align-items: right;
     padding-top: 20px;
     font-size: 16px;
-    width: auto; 
+    width: 94%; 
 }
+
+
 
 .form-group-time{
     display: flex;
     padding-top: 20px;
 }
 
-.buttonForm{
-    padding-top: 50px;
-    text-align: center;
-    font-size: 16px;
-}
 
 .button{
     font-size: 40px;
@@ -47,9 +36,13 @@
     background-color: #3a8ac5;
 }
 
+.customDatePicker{
+    width: 100%;
+}
+
 .customDatePicker input {
     font-size: 32px; 
-    width: auto;
+    width: 100%;
 }
 
 .customDatePicker label {
@@ -62,16 +55,18 @@
 
 .customTimePicker input{
     font-size: 32px;
-    width: 80px;
+    width: 100%;
 }
 
 .customTimePicker {
     padding-top: 20px;
-    padding-right: 20px;
+    padding-right: 30px;
 }
 
 .nameForm{
     font-size: 32px;
     padding: 12px;
     height: 50px;
+    width: 100%;
 }
+
