@@ -2,6 +2,10 @@
 
 このプロジェクトは[Create React App](https://github.com/facebook/create-react-app)を使用して作成されました。
 
+## .envファイルをプロジェクト直下に作成し下記を追加
+REACT_APP_PASSWORD="password（おまかせ）"
+アプリ側で求められます
+
 ## 使用可能なスクリプト
 
 プロジェクトディレクトリ内で以下のコマンドを実行できます。
